@@ -1,0 +1,351 @@
+DOM:document Object Model
+-> To create  the HTML elements Dynamically we need DOM
+->Dynamically means via js
+
+1.To create an  HTML elements via Dynamically we need three steps
+a.document:represent the whole document
+Syntax:document.createElement("ele");
+here above one is an Inbuilt Method in which it will create an HTML tag 
+it returns the respective tag 
+here ele represents the tag 
+
+b.Property Called InnerHTML
+<div></div>
+InnerHTML:it is a property to add the Content inside the HTML elements
+Syntax:variablename.InnerHTML="content";
+
+c.Adding the Element to the Body/Document 
+syntax:document.body.append(variablename);
+
+
+?????
+This is the basic form of html to get input in the console 
+<label for="first">First Name</label><br>
+   <input type="text" name="first" id="first"><br>
+   <label for="middle">Middle Name</label><br>
+   <input type="text" name="middle" id="middle"><br>
+   <label for="last">Last Name</label><br>
+   <input type="text" name="last" id="last"><br>
+   <label for="mail">Email</label><br>
+   <input type="email" name="mail" id="mail"><br>
+   <label for="Pass">Password</label><br>
+   <input type="password" name="pass" id="pass"><br>
+   <button onclick="foo()">Click Me</button>
+<script src="script.js"></script>
+
+This is the basic form of javascript to get input in the console
+function(){
+   var res=document.getElementById("main").value
+console.log(res)
+}
+
+This is used to show the element in the console on website
+var demo=document.createElement("div")
+demo.setAttribute=("id", "demo")
+document.body.append(demo)
+
+
+date of years and all  ????????????????????????????????????????????????????????????????????????????????????????????????
+
+var input=document.createElement("input");
+input.setAttribute("type","date");
+input.setAttribute("id","dob");
+
+var button=document.createElement("button");
+button.innerHTML="Display data";
+button.setAttribute("class","btn btn-primary");
+button.addEventListener("click",displaydata);
+
+var div=document.createElement("div");
+div.setAttribute("id","display");
+
+
+function displaydata(){
+var inputs=document.getElementById("dob").value;
+console.log(typeof(inputs));
+if(Date.parse(inputs)){
+var inputdate=new Date(inputs);
+console.log(inputdate);
+var currentdate=new Date();
+console.log(currentdate);
+//Milliseconds diff
+var millisecdiff=currentdate.getTime()-inputdate.getTime();
+console.log(millisecdiff);
+//Seconds Diff
+var secondsdiff=mathfloor(millisecdiff,1000);
+console.log(secondsdiff);
+//Minutes diff
+var minutesdiff=mathfloor(secondsdiff,60);
+console.log(minutesdiff);
+//Hours diff
+var hoursdiff=mathfloor(minutesdiff,60);
+console.log(hoursdiff);
+//day diff
+var daydiff=mathfloor(hoursdiff,24);
+console.log(daydiff);
+//year diff
+var yeardiff=getyears(inputdate,currentdate);
+console.log(yeardiff);
+//months diff
+var monthdiff=getmonths(inputdate,currentdate);
+console.log(monthdiff);
+div.innerHTML=`
+Given Input date is ${inputs}<br>
+Year ${yeardiff}<br>
+months ${monthdiff}<br>
+days ${daydiff} <br>
+hour ${hoursdiff} <br>
+minute ${minutesdiff} <br>
+second ${secondsdiff} <br>
+milli sec ${millisecdiff}<br>
+`;
+
+
+}
+else{
+    console.log("invalid input entered");
+}
+}
+
+
+function mathfloor(value1,value2){
+return Math.floor(value1/value2);
+}
+
+function getyears(value1,value2){
+var d1=new Date(value1);
+var d2=new Date(value2);
+return d2.getFullYear()-d1.getFullYear();
+}
+
+
+function getmonths(value1,value2){
+    var year=getyears(value1,value2);
+    var months=(year*12)+(value2.getMonth()-value1.getMonth());
+    return months;
+}
+
+document.body.append(input,button,div);
+
+????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+
+function labels(tagname,attrname,attrvalue,content){
+    var ele=document.createElement(tagname);
+    ele.setAttribute(attrname,attrvalue);
+    ele.innerHTML=content;
+    return ele
+}
+function inputs(tagname,attrname,attrvalue,attrname1,attrvalue1,attrname2,attrvalue2,attrname3,attrvalue3){
+    var ele1=document.createElement(tagname);
+    ele1.setAttribute(attrname,attrvalue);
+    ele1.setAttribute(attrname1,attrvalue1);
+    ele1.setAttribute(attrname2,attrvalue2);
+    ele1.setAttribute(attrname3,attrvalue3);
+    return ele1;
+}
+function linebreak(tagname){
+    var br=document.createElement(tagname);
+    return br;
+}
+function ptag(tagname,content){
+    var p=document.createElement(tagname);
+    p.innerHTML=content
+    return p
+}
+function htag(tagname,content){
+    var h=document.createElement(tagname);
+    h.innerHTML=content
+    return h
+}
+
+function buttons(tagname,attrname,attrvalue,attrname1,attrvalue1){
+    var ele2=document.createElement(tagname)
+    ele2.setAttribute(attrname,attrvalue);
+    ele2.setAttribute(attrname1,attrvalue1);
+    return ele2
+}
+
+var title=htag("h2","Form submission:")
+var br=linebreak("br");
+var firstname=labels("label","for","first","First Name:")
+var br0=linebreak("br");
+var input=inputs("input","type","text","name","first","id","first","placeholder","First Name");
+var br1=linebreak("br");
+var lastname=labels("label","for","last","Last Name:")
+var br2=linebreak("br");
+var input1=inputs("input","type","text","name","last","id","last","placeholder","Last Name");
+var br3=linebreak("br");
+var ad1=labels("label","for","address1","Address Line 1:")
+var br4=linebreak("br");
+var input2=inputs("input","type","text","name","address1","id","address1","placeholder","Address Line 1");
+var br5=linebreak("br");
+var ad2=labels("label","for","address2","Address Line 2:")
+var br6=linebreak("br");
+var input3=inputs("input","type","text","name","address2","id","address2","placeholder","Address Line 2");
+var br7=linebreak("br");
+var pin=labels("label","for","pincode","PIN:")
+var br8=linebreak("br");
+var input4=inputs("input","type","number","name","pincode","id","pincode","placeholder","PIN");
+var br9=linebreak("br");
+var para=ptag("p","Gender:")
+var input5=inputs("input","type","radio","name","radio","id","radio","value","Male");
+var rd1=labels("label","for","radio","Male")
+var input6=inputs("input","type","radio","name","radio","id","radio","value","Female");
+var rd2=labels("label","for","radio","Female")
+var br10=linebreak("br");
+var para1=ptag("p","Choice of Food 🍔: (must choose atleast 2 out of 5 options)")
+var input7=inputs("input","type","checkbox","name","food","id","food","value","North Indian");
+var fd1=labels("label","for","food","North Indian")
+var br11=linebreak("br");
+var input8=inputs("input","type","checkbox","name","food","id","food","value","South Indian");
+var fd2=labels("label","for","food","South Indian")
+var br12=linebreak("br");
+var input9=inputs("input","type","checkbox","name","food","id","food","value","Chinese");
+var fd3=labels("label","for","food","Chinese")
+var br13=linebreak("br");
+var input10=inputs("input","type","checkbox","name","food","id","food","value","Japanese");
+var fd4=labels("label","for","food","Japanese")
+var br14=linebreak("br");
+var input11=inputs("input","type","checkbox","name","food","id","food","value","Sea Food");
+var fd5=labels("label","for","food","Sea Food")
+var br15=linebreak("br");
+var state=labels("label","for","state","State:")
+var br16=linebreak("br");
+var input12=inputs("input","type","text","name","state","id","state","placeholder","State");
+var br17=linebreak("br");
+var country=labels("label","for","country","Country:")
+var br18=linebreak("br");
+var input13=inputs("input","type","text","name","country","id","country","placeholder","Country");
+var br19=linebreak("br");
+var br20=linebreak("br");
+var button=buttons("input","type","submit","value","Submit")
+
+document.body.append(title,firstname,br0,input,br1,lastname,br2,input1,br3,ad1,
+br4,input2,br5,ad2,br6,input3,br7,pin,br8,input4,br9,para,input5,rd1,
+input6,rd2,br10,para1,input7,fd1,br11,input8,fd2,br12,input9,fd3,br13,input10,
+fd4,br14,input11,fd5,br15,state,br16,input12,br17,country,br18,input13,br19,br20,button)
+
+api covid ??????????????????????????????????????????????????????????????????????????????????????????????????????????
+
+var div = document.createElement("div");
+div.style.textAlign = "center";
+var input = document.createElement("input");
+input.setAttribute("type", "text");
+input.setAttribute("id", "country");
+input.setAttribute("placeholder","Type the Country")
+
+var button = document.createElement("button");
+button.setAttribute("type", "button");
+button.classList.add("btn", "btn-primary");
+button.innerHTML = "Search";
+button.style.marginLeft = "5px";
+button.addEventListener("click", foo);
+
+let active = document.createElement("div");
+active.setAttribute("id", "active");
+
+div.append(input, button, active);
+document.body.append(div);
+
+
+async function foo() {
+  try {
+  let res = document.getElementById("country").value;
+  console.log(res);
+  let url = `https://api.covid19api.com/total/dayone/country/${res}`;
+  let res1 = await fetch(url);
+  let res2 = await res1.json();
+  let index = res2.length - 1;
+  console.log(res2[index].Active);
+  active.innerHTML = `Total Active cases:${res2[index].Active}<br> Total Deaths cases:${res2[index].Deaths} <br> Total Recovered cases:${res2[index].Recovered} `;
+  }catch (error){
+console.log(error)
+  }
+}
+
+????????????????????????????????????????????????????????????????????????????????????????????????????????
+
+form submision /////////////////////////////////////////////////////////////////////////////////////////
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Form Example</title>
+</head>
+<body>
+
+  <form id="myForm">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName"><br>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName"><br>
+
+    <label>Gender:</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br>
+
+    <label>Choice of Food:</label>
+    <input type="checkbox" id="pizza" name="food" value="pizza">
+    <label for="pizza">Pizza</label>
+    <input type="checkbox" id="burger" name="food" value="burger">
+    <label for="burger">Burger</label><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <table id="myTable">
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Gender</th>
+      <th>Food</th>
+    </tr>
+  </table>
+
+  <script>
+    const myForm = document.getElementById('myForm');
+    const firstNameInput = document.getElementById('firstName');
+    const lastNameInput = document.getElementById('lastName');
+    const genderInputs = document.getElementsByName('gender');
+    const foodInputs = document.getElementsByName('food');
+    const myTable = document.getElementById('myTable');
+
+    myForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      // Check if at least two food options are selected
+      const numSelected = Array.from(foodInputs).filter(input => input.checked).length;
+      if (numSelected < 2) {
+        alert('Please select at least two food options.');
+        return;
+      }
+
+      // Create a new row in the table and add the form data to it
+      const newRow = myTable.insertRow(-1);
+      const firstNameCell = newRow.insertCell(0);
+      const lastNameCell = newRow.insertCell(1);
+      const genderCell = newRow.insertCell(2);
+      const foodCell = newRow.insertCell(3);
+
+      firstNameCell.innerText = firstNameInput.value;
+      lastNameCell.innerText = lastNameInput.value;
+      genderCell.innerText = Array.from(genderInputs).find(input => input.checked).value;
+      foodCell.innerText = Array.from(foodInputs)
+        .filter(input => input.checked)
+        .map(input => input.value)
+        .join(', ');
+
+      // Clear the form inputs
+      firstNameInput.value = '';
+      lastNameInput.value = '';
+      genderInputs[0].checked = true;
+      foodInputs.forEach(input => input.checked = false);
+    });
+  </script>
+
+</body>
+</html>
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////

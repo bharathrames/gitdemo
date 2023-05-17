@@ -1,0 +1,26 @@
+body{
+    background-color: gray;
+}
+.fa{
+    color: blue;
+}
+span{
+    font-size: 14px;
+}
+a{
+    border-bottom: 2px solid black;
+    color: green;
+}
+.sb{
+    background-color: white;
+    padding: 60px 13px;
+    text-align: center;
+    margin: 30px 10px;
+}
+.text{
+    margin: 10px;
+}
+.bb{
+    padding: 60px 0px;
+}
+

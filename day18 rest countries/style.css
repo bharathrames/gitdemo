@@ -1,0 +1,26 @@
+div{
+    text-align: center; 
+
+}
+.card-header{
+    background-color: black;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+img{
+   padding: 14px;
+}
+p{
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.card{
+    background-image: linear-gradient(to right,rgb(196, 192, 192),rgb(209, 178, 38));
+    border: solid 1px black;
+}
+.container{
+    background-color: rgb(128, 238, 255);
+    border: solid 1px black;
+}
+

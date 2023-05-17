@@ -1,2 +1,11 @@
 This is a github learing session 
 it is a learing method
+
+var res=result.filter((ele)=>ele.region==="Asia").reduce((a,b)=>a+b.population,0)
+   
+    console.log(res)
+
+     var res=result.filter((ele)=>ele.population).reduce((a,b)=>a+b.population,0)
+   
+//     console.log(res)
+// <script src="script.js"></script>

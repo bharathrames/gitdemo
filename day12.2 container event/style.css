@@ -1,0 +1,38 @@
+.bb{
+    width: 1100px 500px ;
+    border: solid rgb(134, 130, 130);
+    margin: 40px;
+    height: 600px;
+}
+.header{
+    border: solid rgb(131, 119, 119);
+    margin: 40px 0px 40px 350px;
+    width: 500px;
+    text-align: center;
+    color: rgb(88, 88, 88);
+    
+}
+.mb{
+    height: 200px;
+    width: 200px;
+    
+}
+.sb{
+    border: solid black 1px;
+    margin: 10px 0px 0px 0px;
+}
+.text{
+    font-size: small;
+    text-align: right;
+    padding: 0px 5px 17px 0px ;
+}
+.image{
+    height: 50px;
+}
+.button1{
+    padding-left: 100px;
+    padding-bottom: 7px;
+}
+.span{
+    padding-bottom: 50px;
+}

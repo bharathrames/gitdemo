@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my page</title>
+    <style>
+        .main{
+            margin: 2px 3px;
+            border: 1px solid salmon;
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <form>
+        <p class="main">
+   <label for="name">Student Name:</label><br>
+    <input type="text" name="email" id="name"><br>
+    <label for="email">Email:</label><br>
+    <input type="email" name="email" id="email"><br>
+    <label for="password">Password:</label><br>
+    <input type="password" name="password" id="password"><br>
+    <label for="dob">Dob:</label>
+    <input type="date" name="dob" id="dob"><br><br>
+    <input type="submit" value="submit">
+        </p>
+</form>
+
+</body>
+</html>
+
+
+onsubmit( we should type outside of the form
+):it is a method to perform any operations 
+before the form get submitted
+Before submitting the form all the fields are validated
+eg: <body>
+ <form onsubmit="foo()">
+  </form> 
+ <script>
+  function foo(){
+    alert("You should fill all")
+  }
+</script>
+
+
+CSS:cascaded style sheet
+Why:to add customization to the website
+div,section article introduced in the HTML5
+div:HTML4
+div stands for division/particular section in the document
+from the big to the smallest element in document 
+eg:<div></div>
+
+section:homogenous elements
+similar category of elements
+HTML5
+
+section vs div 
+<div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+    Magnam autem labore ipsa molestias est perferendis similique consequatur culpa, suscipit cum maxime dicta dolore numquam facilis, qui mollitia amet dolores. Aperiam.</div>
+class selectors:
+class selectors can be applicable for more than one elements
+syntax: .classname
+classname is user defined
+use the attribute called class 
+
+For a single element you can apply multiple classes
+but it will take only the recently created class selector
+
+Note: for a single element, you can apply internal as well as inline css
+but priority is inline css
+inline css > internal css
+<section>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta illo eaque deleniti deserunt ab nesciunt minima ipsam nulla, officia inventore vero sequi incidunt voluptatem maxime exercitationem sunt possimus enim!
+
+</section>
+<article> it is used for the selected information to put in the topic
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores aliquid quae veritatis eligendi cupiditate voluptate similique ipsa tenetur natus laborum quos facilis nulla, a deserunt dolorem, temporibus eos deleniti incidunt!
+</article>
+
+inline:represents inside the tag
+it is applied using style attribute
+Note:for a single element 
+you can apply multiple Properties
+eg:<div style=> it should be inside the tag
+
+internal:
+it is applicable for the HTML document
+it is applied by using style tag inside the head tag
+<style>
+css Properties
+</style>
+selectors:
+selectors helps us to apply for a specific/group of elements
+Types of selectors:
+class
+id
+tag selectors
+*
+class selectors:
+class selectors can be applicable for more than one elements
+syntax: .classname{
+    border colour
+}
+classname is user defined
+use the attribute called class 
+
+For a single element you can apply multiple classes
+but it will take only the recently created class selector
+
+Note: for a single element, you can apply internal as well as inline css
+but priority is inline css
+inline css > internal css
+
+id selectors:
+id selectors can be applicable for  one element
+syntax: #idname
+idname is userdefined
+use the attribute called #
+
+Note:for an element we have applied both class as well as id
+now,id will be having higher Priority 
+inline css>id>class>tag
+
+Tag selectors: basically based on the tag names
+it is having least priority
+syntax:tagname{
+    
+}
+external css:
+if you keep a separate file for the css 
+then it is called as external css 
+how to link extenal css to the HTML document
+ eg:!-- <link rel="stylesheet" href="index.css">
+rel:relationship
+href:path to the document
+
+inline>internal>external
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my webpages</title>
+    <!-- <link rel="stylesheet" href="index.css"> -->
+    <style>
+        .main{
+        margin: 2px 3px;
+        border:1px solid blue;
+        background-color: green;
+        }
+       
+    </style>
+</head>
+<body>
+<div class="main">this is div</div>
+<p>this is p</p>
+
+</body>
+</html>
+Box Model:
+it is a Box that is wrapped around an every HTML element
+it consist of 
+padding
+margin
+border
+
+margin:it is an Imaginary line around an HTML element
+every margin consist of the individual sides
+magin apply values in clockwise direction
+margin-top
+margin-right
+margin-bottom
+margin-left
+
+to avoid above scenario we use shorthand Notaion
+Short Hand Notaion:
+all the sides we can write it on a single line
+
+Border:it is a thick visible line
+properties:width,style,color 
+border-top-width:
+border-top-style:
+border-top-color:
+Short Hand Notaion:
+all the sides we can write it on a single line
+border:width style color;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my webpages</title>
+    <!-- <link rel="stylesheet" href="index.css"> -->
+    <style>
+        .main{
+        margin: 2px 3px;
+        border:1px solid blue;
+        background-color: green;
+        }
+       
+    </style>
+</head>
+<body>
+<div class="main">this is div</div>
+<p>this is p</p>
+
+</body>
+</html>
+
+below is a example for table
+<style>
+        table,tr,td,th{
+        border:1px solid black;
+        border-collapse: collapse;
+        }
+        
+    </style>
+   <table>
+        <thead>
+          <tr>
+            <th style="text-align: center;">State of health</th>
+             <th style="text-align: center;" >Fasting Value</th>
+             <th style="text-align: center;">After Remaining</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td style="text-align: center;">healthy</td>
+            <td style="text-align: center;">70</td>
+            <td>100</td>
+            <td>Less than 140</td>
+        </tr>
+        <tr>
+            <td style="text-align:center">Pre-Diabetes</td>
+            <td style="text-align:center">101</td>
+            <td>126</td>
+            <td>140 to 200</td>
+        </tr>
+        <tr>
+          <td style="text-align:center">Diabetes</td>
+          <td style="text-align:center">more than 126</td>
+          <td>Not applicable</td>
+          <td>More than 200</td>
+      </tr>
+
+        </tbody>
+    </table>

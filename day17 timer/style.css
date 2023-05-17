@@ -1,0 +1,11 @@
+*{
+    background-color: aliceblue;
+}
+
+div{
+    display: flex;
+    color: brown;
+    justify-content: center;
+    margin-top: 250px;
+    font-size: larger;
+}

@@ -1,0 +1,69 @@
+create table movies(
+moviename text, 
+genre text,
+reviews text,
+artist text
+)
+
+ANS 1,
+create table images(
+moviename text,
+image blob
+)
+Insert into images values ("Toy story", "jpg")
+
+ANS 2,
+create table genre(
+moviename text,
+movietype text
+)
+Insert into genre values ("Toy story", "comedy")
+
+ANS 3,
+create table reviews(
+moviename text,
+reveiw text,
+ratings int
+)
+Insert into reviews values ("Toy story", "The was good", 8.9)
+
+ANS 4,
+create table artist(
+artistname text,
+skills text
+)
+Insert into artist values ("john", "Director")
+
+ANS 5,
+create table roles(
+  artistname text,
+  moviename text,
+  role text
+)
+Insert into roles values ("john", "Toy story", "hero")
+
+---------------------------------------------------------------------------------------------------------
+To create a table:
+------------------
+create table movies(
+name text, 
+genre text,
+reviews text,
+artist text
+)
+
+To insert a table:
+-----------------
+Insert into movies values ("Toy story", "comedy", 8.7, "john")
+
+To update a movie:
+-----------------
+update movies set Director = "John Lasseter" where title = "A Bug's Life"
+
+To join a table:
+----------------
+select moviename,  skills from movies join artist on movies.id = artist.id
+
+To find the total number of ratings:
+----------------------------------
+select moviename, sum(ratings) from movies group by ratings 

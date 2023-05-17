@@ -1,0 +1,32 @@
+.container{
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 30px;
+    height: 400px;
+    margin-top: 50px;
+    background-image: linear-gradient( rgb(255, 208, 0),rgb(210, 106, 252));
+}
+h1{
+    margin-top: 70px;
+    padding-bottom: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: underline;
+    font-weight: lighter;
+}
+input{
+    width: 309px;
+}
+button{
+    width: 90px;
+    height: 30px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    text-align: center;
+}
+#active{
+    margin-top: 25px;
+    font-family: cursive;
+}
+body{
+    background-color: lightcyan;
+}

@@ -1,0 +1,81 @@
+   <form method="GET">
+<label for="first">First Name</label><br>
+<input type="name" name="E" id="first"><br>
+<label for="middle">Middle Name</label><br>
+<input type="name" name="M" id="middle"><br>
+<label for="last">Last Name</label><br>
+<input type="name" name="L" id="last"><br>
+<label for="email">Email</label><br>
+<input type="email" name="E" id="email" placeholder="email" required><br>
+<label for="password">Password</label><br>
+<input type="password" name="P" id="password" placeholder="password" required><br>
+<label for="upload">Upload a PDF file below</label><br> 
+<input type="file" name="U" id="upload"><br><br>
+<input type="submit" value="Submit">
+   </form>
+
+HTML:hyper  text markup language
+HTML4 vs HTML5
+Autopsy of an HTML document
+HTML tags
+Head tag:metadata:information about the document
+
+Element:combination of tag+content
+ptag:paragraph tag for the theory information
+<p> in side this we can input content</p>
+above one is called as Element
+
+self closing as well as non self losing tags
+self closing: some tags in html does'nt need closing,it closes itself
+ex:meta
+
+non-self closing tags:they won't close we have to close them
+ex:p,body,head,etc..
+
+heading tags: it is used to get darker and larger to lower
+eg: <h1> in side this we can input content </h1>
+
+To redirect the document,  we use a tag/anchor tag 
+EG: <a href=" here you can place a link "></a>
+href: represents the link where it has to redirect
+by default it will be loading in the same page
+target="_blank" :load the page into next tab
+To redirect the document,  we use a tag/anchor tag 
+<a href=""></a>
+href: represents the link where it has to redirect
+by default it will be loading in the same page
+Eg:<a href="eg link" target="_blank" ></a> :load the page into next tab
+
+forms:
+forms in html, are needed to collect the information from the user 
+input type form elements
+EG:<form action=""></form>
+
+for every input type element we have label which will 
+helps us to identify that html element
+
+name attribute:helps us to identify what we have entered in the HTML field
+<input type=""email"" name="Email" id="email">
+
+br:line break
+EG: <br>
+
+deploy this using netlify
+Secure the Form content
+Form Method
+POST:will not share the data in the addressbar
+GET:will share the data in the addressbar 
+by default BROWSER will be having the METHOD GET
+EG: <form method="get"> Inside the form we should get method 
+
+Secure the Form content
+Form Method
+POST:will not share the data in the addressbar
+GET:will share the data in the addressbar 
+by default BROWSER will be having the METHOD GET
+EG: <form method="POST">
+
+Place holder:it's a content inside the input field
+Compulsory the user has to enter the information
+for that we use the required attribute
+Eg:<input type="email" name="red" id="email" placeholder="Email" ><br>
